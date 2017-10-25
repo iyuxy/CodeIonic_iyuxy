@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ch-CN">
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{@blog.description}}" />
+    <meta content="喻小右，小右博客，小右，blog，物联网，架构之路，勿忘初心，方得始终，腾讯云，程序员，华东交大 天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。yuxiaoyou" name="keywords"></meta>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "images/right.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link href="{{asset "css/ionicons.css"}}" rel="stylesheet">
+    
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <!-- 微信分享的图片 -->
+    <div class="share-logo">
+      <img alt="微信分享图片" src="https://o1evmtv09.qnssl.com/blog-share.jpg"/>
+    </div>
+    <div class="container">
+        
+        <div class="row">  
+            <div class="side-nav">
+                <div class="logo">
+                    <a href="/">
+                      {{#if @blog.logo}}<img alt="Blog Logo" src="{{@blog.logo}}" > {{/if}}
+                      <span id="logoTextPart1"><h1>{{@blog.title}}</h1></span> 
+                    </a>
+                </div>
+                <!-- These menus get rendered for desktop - start -->    
+                <nav>
+                    <ul>
+                      <li>
+                        <a href="https://www.iyuxy.com/aboutme/">
+                          <i class="icon ion-ios-people-outline"></i>
+                          <p>About me</p>
+                        </a>
+                      </li> 
+                      <li>
+                        <a href="mailto:yuyouwen@foxmail.com?subject=Hello!">
+                          <i class="icon ion-ios-chatbubble-outline"></i>
+                          <p>Say Hi</p>
+                        </a>
+                      </li>    
+                      <li>
+                        <a href="/feed" target="_blank">
+                          <i class="icon ion-social-rss-outline"></i>
+                          <p>RSS</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <footer>
+                      <ul>
+                        <li>
+                          <a href="https://github.com/yuyouwen" target="_blank">
+                            <i class="icon ion-social-github"></i>
+                            <p>GitHub</p>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="http://weibo.com/1892497794" target="_blank">
+                              <i class="icon icon-weibo"></i>    
+                              weibo
+                            </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)" class="wechat-links">
+                            <img src="https://o1evmtv09.qnssl.com/image/1/09/66b8139d5204c08a6eaa2714e0e65.JPG" class="wechat-pic">
+                            <i class="icon icon-wechat"></i>
+                            <p>wechat<p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://rightblog.sinaapp.com/" target="_blank">
+                            <i class="icon ion-forward"></i>
+                            <p>旧版</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </footer>
+                </nav>
+                <!-- menus ends -->
+            </div>
+            
+        </div>
+        
+        <header class="cover">
+            <div class="mobilelogo">
+                <span id="logoTextPart1">{{@blog.title}}</span> 
+                <a href="/">
+                                 
+                  {{#if @blog.logo}}<img alt="Blog Logo" src="{{@blog.logo}}" > {{/if}}
+                </a>
+                <!-- This menu gets rendered for mobile or iPad -->
+            
+                    <ul class="menuHamburger clearfix" role="navigation">
+
+                        <li class="categories dropdown">
+                            <a class="icon" data-dropdown="site-map-dropdown" data-render="renderSiteMap" href="#" title="go to another topic list or category" id="site-map">
+                                <i class="icon ion-navicon-round" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <section class="d-dropdown" id="site-map-dropdown" >
+                      <ul class="location-links">
+                        <li>
+                            <a href="https://www.iyuxy.com/aboutme/" >
+                                <i class="icon ion-ios-people-outline"></i>    
+                                About me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:karma@sumitjaju.in?subject=Hello!" >    
+                              <i class="icon ion-ios-chatbubble-outline"></i> Say Hi!
+                            </a>
+                        </li>  
+                        <li>
+                            <a href="/feed" target="_blank">    
+                                <i class="icon ion-social-rss-outline"></i>RSS      
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="http://weibo.com/1892497794" target="_blank">
+                                <i class="icon icon-weibo"></i>    
+                                喻小右
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/yuyouwen" target="_blank">
+                                <i class="icon ion-social-github"></i>    
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="wechat-links">
+                              <img src="https://o1evmtv09.qnssl.com/image/1/09/66b8139d5204c08a6eaa2714e0e65.JPG" class="wechat-pic">
+                              <i class="icon icon-wechat"></i>
+                              wechat
+                            </a>
+                        </li>
+                        <li>
+                          <a href="http://rightblog.sinaapp.com/" target="_blank">
+                            <i class="icon ion-forward"></i>
+                            旧版
+                          </a>
+                        </li>
+
+                      </ul>
+                    </section>
+                    </ul>  
+                 <!-- menus end-->   
+                  
+        </div>
+    </header>
+        
+        
+        <div class="main-pane"> 
+            
+            {{! Everything else gets inserted here }}
+            {{{body}}}
+
+            <footer class="main">
+                <span class="attribution">© <a href="https://www.iyuxy.com">喻小右</a> 2016  京ICP备15064386号-1</span>
+                <span class="expand-wrapper">
+                  <!-- <span id="expandor" class="expand">链接:</span> -->
+                </span>
+                <nav id="nav">
+                  <a href="http://www.apkfuns.com/" target="_blank">舞影凌风</a>
+                  <a href="http://www.hisimmer.com/" target="_blank">Simmer</a>
+                  <a href="http://www.fooklook.com/" target="_blank">fooklook</a>
+                  <a href="http://www.izsn.cn/" target="_blank">朱少宁</a>
+                  <a href="http://ningso.me/" target="_blank">NingSo</a>
+                </nav>
+            </footer>
+            <span class="mobileAttribution">© <a href="https://www.iyuxy.com">喻小右</a> 2016 京ICP备15064386号-1</span>
+         </div>
+            
+    </div>
+    
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for CodeBlue }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+              
+<div class="content">
+  <nav>
+      <a class="left" href="{{@blog.url}}">
+          <i class="icon ion-chevron-left"></i>
+          <span style="margin-left:0px;">首页</span>
+      </a> 
+  </nav>
+  <article>
+    <header>
+      <h1>{{title}}</h1>
+      <p class="post-detail">
+        日期：{{date format="YYYY年M月DD日"}}
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {{tags prefix="  标签："}}
+      </p>
+    </header>
+    <p class="description">{{content}}</p>
+  </article>
+  <p class="post-end-tip">(正文完)</p>
+  <hr/>
+</div>
+<div class="shuoba-thread" data-key="{{id}}" data-title="{{title}}" data-url="{{url}}"></div>
+<hr/>
+{{/post}}
