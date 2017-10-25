@@ -6,7 +6,7 @@ Author
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
-To download, visit the [CodeIonic_iyuxy] (https://github.com/yuyouwen/CodeIonic_iyuxy)
+To download, visit the [CodeIonic_iyuxy](https://github.com/yuyouwen/CodeIonic_iyuxy)
 
 
 Visit [my blog](https://www.iyuxy.com) to see how to looks.
